@@ -1,0 +1,88 @@
+html {
+  font-size: 14px;
+  font-family: sans-serif;
+  background-color: #eeeeee;
+}
+
+/* Reset table styling */
+table, caption, tbody, tfoot, thead, tr, th, td {
+  border-collapse: collapse;
+	border-spacing: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+table {
+  box-shadow: -1 0 10px rgba(0, 0, 0, 0.15);
+  table-layout: fixed;
+  width: 100%;
+  font-weight: bold;
+  color: #504c4c;
+}
+
+table, table caption {
+  border: 1px solid #eeeeee;
+  background-color: #ffffff;
+}
+
+table caption {
+  padding: 1.4rem;
+  text-align: left;
+  font-size: 1.4rem;
+  background-color: #ffffff;
+}
+
+thead th, tbody td {
+  padding: 1.2rem 1.4rem;
+}
+
+thead th {
+  font-size: 0.9rem;
+  color: #9FA6AD;
+}
+
+tbody th {
+  text-align: left;
+  padding-left: 1.2rem;
+}
+
+th {
+  border-top: 1px solid #eeeeee;
+}
+
+td {
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Value less than 2.0 */
+td[data-value="critical"] {
+  background-color: #ff1f40;
+}
+
+/* Value between 2.0 and 4.0 */
+td[data-value="high"] {
+  background-color: #fc9526;
+}
+
+/* Value between 4.0 and 6.0 */
+td[data-value="moderate"] {
+  background-color: #f6d827;
+}
+
+/* Value between 6.0 and 8.0 */
+td[data-value="normal"] {
+  background-color: #c9e223;
+}
+
+/* Value greater than 8.0 */
+td[data-value="low"] {
+  background-color: #97e126;
+}
+
+/* No value */
+td[data-value="none"] {
+  background-color: #cccccc;
+}
