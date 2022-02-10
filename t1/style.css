@@ -37,7 +37,7 @@ table caption {
 }
 
 thead th, tbody td {
-  padding: 1.2rem 1.4rem;
+  padding: 1.2rem 0.2rem;
 }
 
 thead th {
@@ -88,4 +88,68 @@ td[data-value="low"] {
 /* No value */
 td[data-value="none"] {
   background-color: #cccccc;
+}
+
+/* A minor fix to fit the text on medium-devices */
+@media only screen and (max-width: 1300px) {
+  thead th {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  /* Make the table-cells stack for vertical viewing */
+  table, thead, tbody, th, td, tr {
+		display: block; 
+	}
+
+  /* To create some visual whitespace between the groups */
+  table {
+    background-color: transparent;
+  }
+
+  /* For accesibility I don't do display:none */
+  thead tr {
+		position: absolute;
+		top: -10000px;
+		left: -10000px;
+	}
+
+  tr { 
+    border: 1px solid #eeeeee;
+    margin-top: 2rem;
+  }
+
+  table caption {
+    padding:  1.2rem;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 5px;
+  }
+	
+  body th {
+    padding: 1.2rem;
+    font-size: 1.2rem;
+  }
+
+	tbody td {
+		border: none;
+		border-bottom: 1px solid #eeeeee;
+		position: relative;
+    padding-right: 1rem;
+    text-align: right;
+	}
+	
+	td:before {
+    float: left;
+    padding-left: 1rem;
+    content: attr(data-label); /* Adding the heading from the data-label */
+	}
+
+  /* For the smallest screens */
+  @media only screen and (max-width: 300px) {
+    html {
+      font-size: 11px;
+    }
+  }
 }
